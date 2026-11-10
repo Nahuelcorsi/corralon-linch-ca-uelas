@@ -9,8 +9,9 @@
   --f-txt:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;font-family:var(--f-txt);color:var(--tinta);background:var(--papel);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:72px;overflow-x:clip;overscroll-behavior-x:none;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--f-txt);color:var(--tinta);background:var(--papel);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip;max-width:100%}
+main,.sec,.hero,.route{overflow-x:clip}
 img{max-width:100%;display:block}
 h1,h2,h3{font-family:var(--f-tit);line-height:1.05;margin:0;letter-spacing:.2px}
 p{margin:0}
@@ -261,6 +262,8 @@ a.ccard:hover{transform:translateY(-6px);background:rgba(255,255,255,.18);border
   .fab{padding:14px}
 }
 @media (max-width:560px){
+  .tape--a{left:-8px}.tape--b{right:-8px}
+  .about__ph{transform:rotate(-1deg)}
   .cards,.contact,.gallery{grid-template-columns:1fr}
   .btn{width:100%}
   .hero__cta .btn{flex:1 1 100%}
